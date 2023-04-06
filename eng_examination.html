@@ -73,7 +73,7 @@
             </tbody>
         </table>
         <div class="text-center">
-            <button type="button" class="btn btn-outline-secondary w-50" onclick="Score()">提交評分</button>
+            <button type="button" class="btn btn-outline-secondary w-50" id="onSub" onclick="Score()">提交評分</button>
             <button type="button" class="btn btn-outline-secondary w-50 mt-2" id="restart" onclick="topic()">重新測試</button>
         </div>
     </div>
@@ -98,6 +98,7 @@
         examination = key.filter(key => Data[key]["範圍"] == range || Data[key]["全部"] == range)
         examination_range = [];
         ExaminationAnswer = {};
+        $("#onSub").show();
         $("#restart").hide();
         $("#table-body").empty("");
         let n = 0
@@ -151,6 +152,7 @@
             }
         })
 
+        $("#onSub").hide();
         $("#restart").show();
     }
 
