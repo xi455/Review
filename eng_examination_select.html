@@ -38,8 +38,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./English.html">英文</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                英文
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="English.html">英文</a></li>
+                                <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./financial.html">財務管理</a>
@@ -75,10 +81,7 @@
                         <input type="number" class="form-control" name="num" id="num_id" placeholder="">
                     </td>
                     <td>
-                        <input type="hidden" name="extent" id="extent_id">
-                        <button type="button" class="btn btn-outline-success" onclick="extent_fun('easy')">簡單</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="extent_fun('difficulty')">困難
-                        </button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="extent_fun()">前往測試</button>
                     </td>
                 </tr>
                 </tbody>
@@ -122,7 +125,7 @@
         $("#num_id").attr("placeholder", `上限${range[RangeNum]}題`)
     }
 
-    function extent_fun(key) {
+    function extent_fun() {
         let range_bool = true
         let num_bool = true
         $("#num_id").val(Math.round($("#num_id").val()))
@@ -147,13 +150,6 @@
 
             num_bool = false
             RemoveAlert()
-        }
-
-
-        if (key == "easy") {
-            $("#extent_id").attr("value", "easy")
-        } else if (key == "difficulty") {
-            $("#extent_id").attr("value", "difficulty")
         }
 
         if (range_bool && num_bool) {
