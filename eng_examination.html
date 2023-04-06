@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+</head>
+
+<style>
+    td {
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+<div class="header" style="display: block;height: 60px;">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Review</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                 aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                英文
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="English.html">英文</a></li>
+                                <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./financial.html">財務管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="content mt-4">
+        <h1></h1>
+        <table class="table table-striped" style="position: relative;">
+            <thead>
+            <tr>
+                <th scope="col">考試題目</th>
+                <th scope="col">考生答案</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-secondary w-50" onclick="Score()">提交評分</button>
+            <button type="button" class="btn btn-outline-secondary w-50 mt-2" id="restart" onclick="topic()">重新測試</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+
+<script src="./english_data.js"></script>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const range = urlParams.get('range');
+    const num = urlParams.get('num');
+    const key = Object.keys(Data)
+    let examination = ""
+    let examination_range = ""
+    let ExaminationAnswer = ""
+
+    $("h1").text(`英文考題 共${num}題`)
+    function topic() {
+        examination = key.filter(key => Data[key]["範圍"] == range || Data[key]["全部"] == range)
+        examination_range = [];
+        ExaminationAnswer = {};
+        $("#restart").hide();
+        $("#table-body").empty("");
+        let n = 0
+        while (n < num) {
+            const randomIndex = Math.floor(Math.random() * examination.length);
+            const randomValue = examination.splice(randomIndex, 1)[0];
+            examination_range.push(randomValue);
+            n += 1
+        }
+
+        examination_range.map(key => {
+            if (Data[key]["中文"].includes("/")) {
+                ExaminationAnswer[key] = Data[key]["中文"].split("/")
+            } else {
+                ExaminationAnswer[key] = [Data[key]["中文"]]
+            }
+
+            $("#table-body").append(`
+            <tr>
+                <td>${key}</td>
+                <td><input type="email" class="form-control" placeholder="請輸入中文翻譯"></td>
+                <td>
+                <button type="button" class="btn btn-outline-secondary prompt" data-word="${key}">提示</button>
+                </td>
+            </tr>
+        `)
+        })
+
+        $(".prompt").map(p => {
+            $(".prompt")[p].addEventListener("click", function (e) {
+                const td = $(this).closest('td');
+                $(this)[0].disabled = true;
+                td.append(`# ${ExaminationAnswer[$(this).data("word")]}`)
+            })
+        })
+    }
+
+    topic();
+
+    function Score() {
+        $("input").map(inp => $("input")[inp].disabled = true)
+        $("tr").map(element => {
+            $("tr")[element].className = ""
+            if (element != 0) {
+                if (ExaminationAnswer[$("tr")[element].children[0].innerHTML].includes($($("tr")[element].children[1])[0].children[0].value)) {
+                    $("tr")[element].classList.add("bg-success-subtle")
+                } else {
+                    $("tr")[element].classList.add("bg-danger-subtle")
+                }
+                $("tr")[element].children[0].innerHTML = `${$("tr")[element].children[0].innerHTML} => ${ExaminationAnswer[$("tr")[element].children[0].innerHTML]}`
+            }
+        })
+
+        $("#restart").show();
+    }
+
+</script>
+</body>
+</html>
