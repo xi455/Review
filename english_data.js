@@ -23,7 +23,7 @@ let Data = {
     "sustainable": {
         "範圍": "6A",
         "全部":"All",
-        "中文": "適當的",
+        "中文": "能維持的/可持續發展的",
         "例句": "We need to develop sustainable energy sources to protect the environment.",
         "句子的中文": "我們需要開發可持續的能源來保護環境。"
     },
