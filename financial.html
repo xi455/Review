@@ -82,6 +82,7 @@
                         <th scope="col">分類</th>
                         <th scope="col">名稱</th>
                         <th scope="col">公式</th>
+                        <th scope="col">提醒</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -99,16 +100,17 @@
             const tableRows = Object.keys(Data).map((key) => {
                 const row = Data[key];
 
-
+                console.log(row)
                 if (row["分類"] == key_name) {
                     return `
                     <div class="accordion" id="accordionExample">
                             <tr data-bs-toggle="collapse" data-bs-target="#collapse-${key}"
                                 aria-expanded="false" aria-controls="collapse-${key}">
 
-                                <td style="width:30%;">${row["分類"]}</td>
+                                <td style="width:10%;">${row["分類"]}</td>
                                 <td style="width:30%;">${key}</td>
                                 <td style="">${row["公式"]}</td>
+                                <td style="">${row["提醒"]}</td>
 
                             </tr>
                         
