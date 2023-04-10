@@ -72,8 +72,8 @@
             <thead>
             <tr>
                 <th scope="col">考試題目</th>
-                <th scope="col">考生答案</th>
-                <th scope="col"></th>
+<!--                <th scope="col">考生答案</th>-->
+<!--                <th scope="col"></th>-->
             </tr>
             </thead>
             <tbody id="table-body">
@@ -125,21 +125,23 @@
             }
 
             $("#table-body").append(`
-            <tr>
-                <td class="col-3">${key}</td>
-                <td class="col-6"><input type="email" class="form-control" placeholder="請輸入中文翻譯"></td>
-                <td class="col-3">
-                <button type="button" class="btn btn-outline-secondary prompt" data-word="${key}">提示</button>
-                </td>
-            </tr>
-        `)
+                <tr class="border border-secondary-subtle">
+                    <td class="co-3">${key}
+                      <button type="button" class="btn btn-outline-secondary prompt btn-sm" data-word="${key}"># 解答</button>
+                      <br>
+                      <input type="text" class="form-control mt-2" placeholder="請輸入公式名稱">
+                    </td>
+                </tr>
+            `)
         })
 
         $(".prompt").map(p => {
             $(".prompt")[p].addEventListener("click", function (e) {
                 const td = $(this).closest('td');
                 $(this)[0].disabled = true;
-                td.append(`# ${ExaminationAnswer[$(this).data("word")]}`)
+                $(this)[0].classList.add("text-danger")
+                $(this)[0].innerText = `# ${ExaminationAnswer[$(this).data("word")]}`
+                // td.append(`# ${ExaminationAnswer[$(this).data("word")]}`)
             })
         })
     }
@@ -151,7 +153,7 @@
         $("tr").map(element => {
             $("tr")[element].className = ""
             if (element != 0) {
-                if (ExaminationAnswer[$("tr")[element].children[0].innerHTML].includes($($("tr")[element].children[1])[0].children[0].value)) {
+                if (ExaminationAnswer[$("tr")[element].children[0].innerText.split("#")[0].trim()].includes($("tr")[element].children[0].lastElementChild.value)) {
                     $("tr")[element].classList.add("bg-success-subtle")
                 } else {
                     $("tr")[element].classList.add("bg-danger-subtle")

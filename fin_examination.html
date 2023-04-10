@@ -123,10 +123,10 @@
       $("#table-body").append(`
             <tr class="border border-secondary-subtle">
                 <td class="co-3">${Data[key]["公式"]}
-                <button type="button" class="btn btn-outline-secondary prompt btn-sm" data-word="${keyArray[0]}"># 解答</button>
-               <br>
-               <input type="email" class="form-control mt-2" placeholder="請輸入公式名稱">
-               </td>
+                  <button type="button" class="btn btn-outline-secondary prompt btn-sm" data-word="${keyArray[0]}"># 解答</button>
+                  <br>
+                  <input type="text" class="form-control mt-2" placeholder="請輸入公式名稱">
+                </td>
             </tr>
         `)
     })
@@ -135,6 +135,7 @@
       $(".prompt")[p].addEventListener("click", function (e) {
         const td = $(this).closest('td');
         $(this)[0].disabled = true;
+        $(this)[0].classList.add("text-danger")
         $(this)[0].innerText = `# ${$(this).data("word")}`
       })
     })
