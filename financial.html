@@ -17,116 +17,150 @@
 </style>
 
 <body>
-    <div class="header" style="display: block;height: 60px;">
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">Review</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+<div class="header" style="display: block;height: 60px;">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Review</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                 aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    英文
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="English.html">英文</a></li>
-                                    <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                    財務管理
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
-                                    <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
-                                    <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                英文
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="English.html">英文</a></li>
+                                <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                財務管理
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
+                                <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
+                                <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 
-    <div class="container">
-        <div class="content mt-4">
-            <h1>財務管理</h1>
-            <div class="menu">
-                <button type="button" class="btn btn-outline-primary" onclick="read('流動性')">流動性</button>
-                <button type="button" class="btn btn-outline-primary" onclick="read('資產管理')">資產管理</button>
-                <button type="button" class="btn btn-outline-primary" onclick="read('負債管理')">負債管理</button>
-                <button type="button" class="btn btn-outline-primary" onclick="read('獲利能力')">獲利能力</button>
-                <button type="button" class="btn btn-outline-primary" onclick="read('市場價值')">市場價值</button>
-                <button type="button" class="btn btn-outline-primary" onclick="location.href='./fin_examination_select.html'">自我測驗</button>
+<div class="container">
+    <div class="content mt-4">
+        <h1>財務管理</h1>
+        <div class="menu">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" aria-current="page" id="nav_one" onclick="read(this.id,'流動性')">流動性</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" aria-current="page" id="nav_two" onclick="read(this.id,'資產管理')">資產管理</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" aria-current="page" id="nav_three" onclick="read(this.id,'負債管理')">負債管理</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" aria-current="page" id="nav_four" onclick="read(this.id,'獲利能力')">獲利能力</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" aria-current="page" id="nav_five" onclick="read(this.id,'市場價值')">市場價值</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-dark" onclick="location.href='./fin_examination_select.html'">自我測驗</button>
+                </li>
+            </ul>
+
+        </div>
+        <table class="table table-striped text-center" style="position: relative;">
+            <thead>
+            <tr>
+                <th scope="col">分類</th>
+                <th scope="col">名稱</th>
+                <th scope="col">公式</th>
+                <th scope="col">提醒</th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <table class="table table-striped" style="position: relative;">
-                <thead>
-                    <tr>
-                        <th scope="col">分類</th>
-                        <th scope="col">名稱</th>
-                        <th scope="col">公式</th>
-                        <th scope="col">提醒</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                </tbody>
-            </table>
+            <div class="modal-body">
+                <p id="text_box"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+            </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
-    <script src="./financial_data.js"></script>
-    <script>
-        function read(key_name) {
-            const tableRows = Object.keys(Data).map((key) => {
-                const row = Data[key];
+<script src="./financial_data.js"></script>
+<script>
+    function read(who,key_name) {
+        console.log("as")
+        let nav_btn = document.querySelectorAll(".nav>li>a")
+        nav_btn.forEach(element => {
+            console.log($("#"+element.id))
+            $("#"+element.id).removeClass("active")
+        });
+        const tableRows = Object.keys(Data).map((key) => {
+            const row = Data[key];
 
-                console.log(row)
-                if (row["分類"] == key_name) {
-                    return `
+            // console.log(row)
+            if (row["分類"] == key_name) {
+                return `
                     <div class="accordion" id="accordionExample">
-                            <tr data-bs-toggle="collapse" data-bs-target="#collapse-${key}"
-                                aria-expanded="false" aria-controls="collapse-${key}">
-
+                            <tr onclick="open_modal('${row["講解"]}','${key}')">
                                 <td class="col-1">${row["分類"]}</td>
                                 <td class="col-3">${key}</td>
                                 <td class="col-5">${row["公式"]}</td>
                                 <td class="col-3">${row["提醒"]}</td>
-
                             </tr>
-                        
-                            <div id="collapse-${key}" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
-                            style="position: absolute;z-index:1;width:100%; background-color:#fff; border:1px solid #333;">
-                                <div class="accordion-body">
-                                    ${row["講解"]}    
-                                </div>
-                            </div>        
                         </div>
                     `;
-                }
-            });
+            }
+        });
+        $("#"+who).addClass("active")
 
-            $("#table-body").html(tableRows.join(""));
-        }
-        read("流動性")
-    </script>
+        $("#table-body").html(tableRows.join(""));
+    }
+    function open_modal(text,key){
+        console.log(text)
+        $("#modal-title").text(key)
+        $("#text_box").text(text)
+        $("#modal").modal("show")
+    }
+    // read("流動性","流動性")
+    $("#nav_one").click();
+</script>
 </body>
