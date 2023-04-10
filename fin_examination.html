@@ -72,8 +72,8 @@
       <thead>
       <tr>
         <th scope="col">考試題目</th>
-        <th scope="col">考生答案</th>
-        <th scope="col"></th>
+<!--        <th scope="col">考生答案</th>-->
+<!--        <th scope="col"></th>-->
       </tr>
       </thead>
       <tbody id="table-body">
@@ -122,11 +122,12 @@
 
       $("#table-body").append(`
             <tr>
-                <td class="co-3">${Data[key]["公式"]}</td>
-                <td class="col-6"><input type="email" class="form-control" placeholder="請輸入公式名稱"></td>
-                <td class="col-3">
+                <td class="co-3">${Data[key]["公式"]}
                 <button type="button" class="btn btn-outline-secondary prompt" data-word="${keyArray[0]}">提示</button>
-                </td>
+               </td>
+            </tr>
+            <tr>
+                <td class="col-6"><input type="email" class="form-control" placeholder="請輸入公式名稱"></td>
             </tr>
         `)
     })
