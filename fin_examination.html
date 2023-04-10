@@ -121,13 +121,12 @@
         ExaminationAnswer[Data[key]["公式"]] = [keyArray[0]]
 
       $("#table-body").append(`
-            <tr>
+            <tr class="border border-secondary-subtle">
                 <td class="co-3">${Data[key]["公式"]}
-                <button type="button" class="btn btn-outline-secondary prompt" data-word="${keyArray[0]}">提示</button>
+                <button type="button" class="btn btn-outline-secondary prompt btn-sm" data-word="${keyArray[0]}"># 解答</button>
+               <br>
+               <input type="email" class="form-control mt-2" placeholder="請輸入公式名稱">
                </td>
-            </tr>
-            <tr>
-                <td class="col-6"><input type="email" class="form-control" placeholder="請輸入公式名稱"></td>
             </tr>
         `)
     })
@@ -136,19 +135,19 @@
       $(".prompt")[p].addEventListener("click", function (e) {
         const td = $(this).closest('td');
         $(this)[0].disabled = true;
-        td.append(`# ${$(this).data("word")}`)
+        $(this)[0].innerText = `# ${$(this).data("word")}`
       })
     })
   }
 
   topic();
-
   function Score() {
     $("input").map(inp => $("input")[inp].disabled = true)
+
     $("tr").map(element => {
-      $("tr")[element].className = ""
       if (element != 0) {
-        if (ExaminationAnswer[$("tr")[element].children[0].innerHTML].includes($($("tr")[element].children[1])[0].children[0].value)) {
+        $("tr")[element].className = "border border-secondary-subtle "
+        if (ExaminationAnswer[$("tr")[element].children[0].innerText.split("#")[0].trim()].includes($("tr")[element].children[0].lastElementChild.value)) {
           $("tr")[element].classList.add("bg-success-subtle")
         } else {
           $("tr")[element].classList.add("bg-danger-subtle")
