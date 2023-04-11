@@ -148,7 +148,7 @@
     }
 
     function Dialog(key) {
-        $("#exampleModalLabel").text(key)
+        $("#exampleModalLabel").text(`${key} : ${Data[key]["中文"]}`)
         $(".modal-body")[0].innerHTML = (`
                 ${Data[key]["例句"]}
                 <br>
