@@ -70,10 +70,10 @@
     <div class="content mt-4">
         <h1>英文單字</h1>
         <div class="menu">
-            <button type="button" class="btn btn-outline-primary" onclick="read('6A')">6A</button>
-            <button type="button" class="btn btn-outline-primary" onclick="read('6B')">6B</button>
-            <button type="button" class="btn btn-outline-primary" onclick="read('7A')">7A</button>
-            <button type="button" class="btn btn-outline-primary" onclick="location.href='eng_examination_select.html'">
+            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "6A" onclick="read('6A')">6A</button>
+            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "6B" onclick="read('6B')">6B</button>
+            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "7A" onclick="read('7A')">7A</button>
+            <button type="button" class="btn btn-outline-primary EngBtn" onclick="location.href='eng_examination_select.html'">
                 自我測驗
             </button>
         </div>
@@ -116,6 +116,14 @@
 <script src="./english_data.js"></script>
 <script>
     function read(key_name) {
+        $(".EngBtn").each(function (){
+            if($(this).data("btn") == key_name){
+                $(this)[0].className = "btn btn-primary EngBtn"
+            }else{
+                $(this)[0].className = "btn btn-outline-primary EngBtn"
+            }
+        })
+
         const tableRows = Object.keys(Data).map((key) => {
             const row = Data[key];
 
