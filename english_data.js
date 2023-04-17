@@ -266,5 +266,4 @@ let Data = {
         "例句": "The town has a population of 10,000 inhabitants.",
         "句子的中文": "這個小鎮有一萬名居民。"
     }
-
 }
