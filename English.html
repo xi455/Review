@@ -17,120 +17,140 @@
 </style>
 
 <body>
-<div class="header" style="display: block;height: 60px;">
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Review</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+    <div class="header" style="display: block;height: 60px;">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Review</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                 aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                英文
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="English.html">英文</a></li>
-                                <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                財務管理
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
-                                <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
-                                <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    英文
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="English.html">英文</a></li>
+                                    <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    財務管理
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
+                                    <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
+                                    <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</div>
-
-<div class="container">
-    <div class="content mt-4">
-        <h1>英文單字</h1>
-        <div class="menu">
-            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "6A" onclick="read('6A')">6A</button>
-            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "6B" onclick="read('6B')">6B</button>
-            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "7A" onclick="read('7A')">7A</button>
-            <button type="button" class="btn btn-outline-primary EngBtn" data-btn = "7B" onclick="read('7B')">7B</button>
-            <button type="button" class="btn btn-outline-primary EngBtn" onclick="location.href='eng_examination_select.html'">
-                自我測驗
-            </button>
-        </div>
-        <table class="table table-striped" style="position: relative;">
-            <thead>
-            <tr>
-                <th scope="col">範圍</th>
-                <th scope="col">單字</th>
-                <th scope="col">中文</th>
-            </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
+        </nav>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ff
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+    <div class="container">
+        <div class="content mt-4">
+            <h1>英文單字</h1>
+            <div class="menu" id="menu"></div>
+            <table class="table table-striped" style="position: relative;">
+                <thead>
+                    <tr>
+                        <th scope="col">範圍</th>
+                        <th scope="col">單字</th>
+                        <th scope="col">中文</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ff
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
 
-<script src="./english_data.js"></script>
-<script>
-    function read(key_name) {
-        $(".EngBtn").each(function (){
-            if($(this).data("btn") == key_name){
-                $(this)[0].className = "btn btn-primary EngBtn"
-            }else{
-                $(this)[0].className = "btn btn-outline-primary EngBtn"
+    <script src="./english_data.js"></script>
+    <script>
+        let key = Object.keys(Data)
+        let range = []
+
+        key.map(k => Data[k]["範圍"]).map(key => {
+            if (!range.includes(key)) {
+                range.push(key)
             }
         })
 
-        const tableRows = Object.keys(Data).map((key) => {
-            const row = Data[key];
+        function menu() {
+            range.map(r => {
+                $("#menu").append(`
+                <button type="button" class="btn btn-outline-primary EngBtn" data-btn="${r}"
+                        onclick="read('${r}')">${r}</button>
+            `)
+            })
+
+            $("#menu").append(`
+                <button type="button" class="btn btn-outline-primary EngBtn"
+                    onclick="location.href='eng_examination_select.html'">
+                        自我測驗
+                    </button>
+            `)
+
+            read(range[0])
+        }
+
+        menu()
+
+        function read(key_name) {
+            $(".EngBtn").each(function () {
+                if ($(this).data("btn") == key_name) {
+                    $(this)[0].className = "btn btn-primary EngBtn"
+                } else {
+                    $(this)[0].className = "btn btn-outline-primary EngBtn"
+                }
+            })
+
+            const tableRows = Object.keys(Data).map((key) => {
+                const row = Data[key];
 
 
-            if (row["範圍"] == key_name) {
-                return `
+                if (row["範圍"] == key_name) {
+                    return `
                         <div class="accordion" id="accordionExample">
                             <tr data-bs-toggle="modal" data-bs-target="#exampleModal"
                                 onclick="Dialog('${key}')">
@@ -142,23 +162,21 @@
                             </tr>
                         </div>
                     `;
-            }
-        });
+                }
+            });
 
-        $("#table-body").html(tableRows.join(""));
-    }
+            $("#table-body").html(tableRows.join(""));
+        }
 
-    function Dialog(key) {
-        $("#exampleModalLabel").text(`${key} : ${Data[key]["中文"]}`)
-        $(".modal-body")[0].innerHTML = (`
+        function Dialog(key) {
+            $("#exampleModalLabel").text(`${key} : ${Data[key]["中文"]}`)
+            $(".modal-body")[0].innerHTML = (`
                 ${Data[key]["例句"]}
                 <br>
                 ${Data[key]["句子的中文"]}
         `)
-    }
-
-    read("6A")
-</script>
+        }
+    </script>
 </body>
 
 </html>

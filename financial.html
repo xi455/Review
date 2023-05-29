@@ -39,7 +39,8 @@
                                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     英文
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
@@ -49,7 +50,7 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
+                                    aria-expanded="false">
                                     財務管理
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
@@ -68,13 +69,13 @@
     <div class="container">
         <div class="content mt-4">
             <h1>財務管理</h1>
-            <div class="menu">
-                <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "流動性" onclick="read('流動性')">流動性</button>
+            <div class="menu" id="menu">
+                <!-- <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "流動性" onclick="read('流動性')">流動性</button>
                 <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "資產管理" onclick="read('資產管理')">資產管理</button>
                 <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "負債管理" onclick="read('負債管理')">負債管理</button>
                 <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "獲利能力" onclick="read('獲利能力')">獲利能力</button>
                 <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "市場價值" onclick="read('市場價值')">市場價值</button>
-                <button type="button" class="btn btn-outline-primary FinBtn" onclick="location.href='./fin_examination_select.html'">自我測驗</button>
+                <button type="button" class="btn btn-outline-primary FinBtn" onclick="location.href='./fin_examination_select.html'">自我測驗</button> -->
             </div>
             <table class="table table-striped" style="position: relative;">
                 <thead>
@@ -102,7 +103,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-<!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
                     </div>
                 </div>
             </div>
@@ -114,12 +115,36 @@
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <script src="./financial_data.js"></script>
     <script>
+        let key = Object.keys(Data)
+        let range = []
+        key.map(k => Data[k]["分類"]).map(key => {
+            if (!range.includes(key)) {
+                range.push(key)
+            }
+        })
+
+        function menu() {
+            range.map(r => {
+                $("#menu").append(`
+                <button type="button" class="btn btn-outline-primary FinBtn" data-btn = "${r}" onclick="read('${r}')">${r}</button>
+            `)
+            })
+
+            $("#menu").append(`
+            <button type="button" class="btn btn-outline-primary FinBtn" onclick="location.href='./fin_examination_select.html'">自我測驗</button>
+            `)
+
+            read(range[0])
+        }
+
+        menu()
+
         function read(key_name) {
 
-            $(".FinBtn").each(function (){
-                if($(this).data("btn") == key_name){
+            $(".FinBtn").each(function () {
+                if ($(this).data("btn") == key_name) {
                     $(this)[0].className = "btn btn-primary FinBtn"
-                }else{
+                } else {
                     $(this)[0].className = "btn btn-outline-primary FinBtn"
                 }
             })
@@ -142,10 +167,9 @@
             $("#table-body").html(tableRows.join(""));
         }
 
-        function Dialog(key){
+        function Dialog(key) {
             $("#exampleModalLabel").text(key)
             $(".modal-body").text(Data[key]["講解"])
         }
-        read("流動性")
     </script>
 </body>
