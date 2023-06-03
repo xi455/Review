@@ -1,269 +1,282 @@
 let Data = {
-    "suburb": {
-        "範圍": "6A",
+    "compelling": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "郊區",
-        "例句": "I grew up in the suburbs where everything was quiet and green.",
-        "句子的中文": "我在郊區長大，那裡的一切都是安靜和綠色的。"
+        "中文": "強制的/令人注目的/令人感嘆的",
+        "例句": "The movie had a compelling storyline that kept me engaged throughout.",
+        "句子的中文": "這部電影有一個引人入勝的故事情節，讓我全程投入其中。"
     },
-    "resisting": {
-        "範圍": "6A",
+    "dispute": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "反抗",
-        "例句": "She was resisting arrest and had to be restrained.",
-        "句子的中文": "她在反抗逮捕，必須被制止。"
+        "中文": "爭論/爭執",
+        "例句": "They are in a dispute over the ownership of the land.",
+        "句子的中文": "他們在土地所有權上有爭議。"
     },
-    "grasps": {
-        "範圍": "6A",
+    "proponent": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "抓牢",
-        "例句": "He grasps the concept of quantum mechanics quickly.",
-        "句子的中文": "他很快就掌握了量子力學的概念。"
+        "中文": "提議人/擁護者",
+        "例句": "He is a strong proponent of renewable energy.",
+        "句子的中文": "他是可再生能源的堅定擁護者。"
     },
-    "sustainable": {
-        "範圍": "6A",
+    "relentlessly": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "能維持的/可持續發展的",
-        "例句": "We need to develop sustainable energy sources to protect the environment.",
-        "句子的中文": "我們需要開發可持續的能源來保護環境。"
+        "中文": "無情地/殘酷地",
+        "例句": "She pursued her goals relentlessly, never giving up.",
+        "句子的中文": "她不懈追求自己的目標，從不放棄。"
     },
-    "chief": {
-        "範圍": "6A",
+    "symptom": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "主要的/最重要的",
-        "例句": "The chief reason for the company's success is its innovative products.",
-        "句子的中文": "公司成功的主要原因是其創新產品。"
+        "中文": "症狀/徵候",
+        "例句": "Fever is a common symptom of the flu.",
+        "句子的中文": "發燒是流感的常見症狀。"
     },
-    "get_on_board": {
-        "範圍": "6A",
+    "disrupt": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "加入",
-        "例句": "If you want to succeed, you need to get on board with the latest trends.",
-        "句子的中文": "如果你想成功，你需要跟上最新的潮流。"
+        "中文": "使分裂/使瓦解",
+        "例句": "The construction noise disrupted my concentration.",
+        "句子的中文": "施工的噪音打擾了我的專注力。"
     },
-    "devastating": {
-        "範圍": "6A",
+    "cease": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "毀滅性的",
-        "例句": "The earthquake had a devastating effect on the local community.",
-        "句子的中文": "地震對當地社區產生了毀滅性的影響。"
+        "中文": "停止/終止",
+        "例句": "The rain finally ceased, and the sun came out.",
+        "句子的中文": "雨終於停了，太陽出來了。"
     },
-    "vibrant": {
-        "範圍": "6A",
+    "revenge": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "活躍的",
-        "例句": "The city's downtown is always vibrant with life and activity.",
-        "句子的中文": "城市的市中心總是充滿生氣和活力。"
+        "中文": "報仇/報復",
+        "例句": "He sought revenge on those who had wronged him.",
+        "句子的中文": "他尋求對那些冤枉他的人報復。"
     },
-    "complicated": {
-        "範圍": "6A",
+    "inconclusive": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "複雜的",
-        "例句": "The instructions for this DIY project are quite complicated.",
-        "句子的中文": "這個自己動手的項目的說明相當複雜。"
+        "中文": "非決定性的/不確定的",
+        "例句": "The results of the experiment were inconclusive.",
+        "句子的中文": "這個實驗的結果並不確定。"
     },
-    "at_once": {
-        "範圍": "6A",
+    "grand": {
+        "範圍": "8A",
         "全部": "All",
-        "中文": "立刻/馬上",
-        "例句": "Please call me back at once.",
-        "句子的中文": "請馬上回電給我。"
+        "中文": "雄偉的/堂皇的",
+        "例句": "The hotel lobby had a grand entrance with chandeliers and marble floors.",
+        "句子的中文": "酒店大堂有著華麗的入口，有吊燈和大理石地板。"
     },
-    "withdraw": {
-        "範圍": "6B",
+    "suspicious": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "離開/撤退",
-        "例句": "He decided to withdraw from the race.",
-        "句子的中文": "他決定退出比賽。"
+        "中文": "猜疑的/疑心的",
+        "例句": "I find his behavior very suspicious.",
+        "句子的中文": "我覺得他的行為非常可疑。"
     },
-    "agitation": {
-        "範圍": "6B",
+    "allegation": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "激動/不安",
-        "例句": "The news caused great agitation among the public.",
-        "句子的中文": "這個消息引起了公眾的極大不安。"
+        "中文": "斷言/申述",
+        "例句": "The police are investigating the allegations of corruption.",
+        "句子的中文": "警方正在調查貪污的指控。"
     },
-    "evade": {
-        "範圍": "6B",
+    "motive": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "躲避/逃避",
-        "例句": "He tried to evade the question.",
-        "句子的中文": "他試圖逃避這個問題。"
+        "中文": "動機/主旨",
+        "例句": "The detective tried to determine the motive behind the crime.",
+        "句子的中文": "警探試圖找出這起犯罪背後的動機。"
     },
-    "instinct": {
-        "範圍": "6B",
+    "candidate": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "本能/天性",
-        "例句": "A mother's instinct to protect her child is very strong.",
-        "句子的中文": "母親保護孩子的本能非常強烈。"
+        "中文": "候選人/候補者",
+        "例句": "There are several candidates running for mayor in the upcoming election.",
+        "句子的中文": "在即將到來的選舉中，有幾位候選人競選市長職位。"
     },
-    "genuine": {
-        "範圍": "6B",
+    "in terms of": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "真的/名副其實的",
-        "例句": "I can assure you that this is a genuine antique.",
-        "句子的中文": "我向你保證這是一件名副其實的古董。"
+        "中文": "就...方面來說",
+        "例句": "In terms of salary, this job offers competitive pay.",
+        "句子的中文": "就薪資而言，這份工作提供具有競爭力的薪酬。"
     },
-    "weapons": {
-        "範圍": "6B",
+    "suffocation": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "武器",
-        "例句": "The soldiers were equipped with the latest weapons.",
-        "句子的中文": "士兵們裝備了最新的武器。"
-
+        "中文": "窒息/悶死",
+        "例句": "The victim died of suffocation due to lack of oxygen.",
+        "句子的中文": "受害者因缺氧而窒息致死。"
     },
-    "compiled": {
-        "範圍": "6B",
+    "deprived (of)": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "編輯",
-        "例句": "The code needs to be compiled before it can be run.",
-        "句子的中文": "在運行之前需要編譯代碼。"
+        "中文": "被剝奪了",
+        "例句": "Children in poverty often grow up deprived of basic necessities.",
+        "句子的中文": "貧困中的孩子通常在缺乏基本生活必需品的環境中長大。"
     },
-    "chaos": {
-        "範圍": "6B",
+    "remorse": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "混亂",
-        "例句": "The party turned into chaos after the unexpected arrival of the police.",
-        "句子的中文": "警察的意外到來導致派對陷入混亂。"
+        "中文": "痛悔/自責",
+        "例句": "He felt deep remorse for his actions and apologized sincerely.",
+        "句子的中文": "他對自己的行為感到深深的懊悔，並誠摯地道歉。"
     },
-    "collapse": {
-        "範圍": "6B",
+    "manipulative": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "瓦解",
-        "例句": "The old building collapsed after the earthquake.",
-        "句子的中文": "這座老建築在地震後倒塌了。"
+        "中文": "操作的/用手控制的/巧妙處理的",
+        "例句": "She is known for her manipulative tactics in getting what she wants.",
+        "句子的中文": "她以巧妙的策略來獲得自己想要的東西而聞名。"
     },
-    "abolish": {
-        "範圍": "6B",
+    "frankly": {
+        "範圍": "8B",
         "全部": "All",
-        "中文": "廢除/禁止",
-        "例句": "The government decided to abolish the law that restricted freedom of speech.",
-        "句子的中文": "政府決定廢除限制言論自由的法律。"
+        "中文": "率直地/坦白地",
+        "例句": "To be Frank, I don't think your idea will work.",
+        "句子的中文": "坦白地說，我不認為你的想法會奏效。"
     },
-    "progresses": {
-        "範圍": "7A",
+    "encounter": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "進行/前進",
-        "例句": "The construction of the new school is progressing smoothly.",
-        "句子的中文": "新學校的建設進展順利。"
+        "中文": "遭遇/遇到",
+        "例句": "I had a strange encounter with a mysterious person last night.",
+        "句子的中文": "昨晚我與一個神秘人有了一次奇怪的遭遇。"
     },
-    "sacred": {
-        "範圍": "7A",
+    "memorial": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "神聖的",
-        "例句": "The temple is a sacred place for the local people.",
-        "句子的中文": "這座寺廟對當地人來說是個神聖的地方。"
+        "中文": "紀念物/紀念碑",
+        "例句": "They built a memorial to honor the soldiers who died in the war.",
+        "句子的中文": "他們建造了一個紀念物，以紀念在戰爭中犧牲的士兵。"
     },
-    "harmony": {
-        "範圍": "7A",
+    "stunned": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "和諧",
-        "例句": "The family lived together in harmony despite their differences.",
-        "句子的中文": "儘管有所不同，這個家庭還是和睦相處。"
+        "中文": "驚倒/驚歎",
+        "例句": "I was stunned by the breathtaking beauty of the sunset.",
+        "句子的中文": "夕陽的美麗令我驚嘆不已。"
     },
-    "organized": {
-        "範圍": "7A",
+    "firsthand": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "有條理的/井井有條的",
-        "例句": "She is a very organized person and always has a plan.",
-        "句子的中文": "她是個非常有條理的人，總是有計劃。"
+        "中文": "第一手的/直接的",
+        "例句": "I got firsthand information about the incident from a reliable source.",
+        "句子的中文": "我從一個可靠的來源獲得了關於這一事件的第一手信息。"
     },
-    "suspect": {
-        "範圍": "7A",
+    "carving": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "懷疑",
-        "例句": "The police suspect that he is involved in the robbery.",
-        "句子的中文": "警方懷疑他涉嫌搶劫案。"
+        "中文": "雕刻/雕刻術",
+        "例句": "The artist spent months working on the intricate carving of the statue.",
+        "句子的中文": "這位藝術家花了幾個月的時間來完成這座雕像上複雜的雕刻工作。"
     },
-    "society": {
-        "範圍": "7A",
+    "immortalize": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "社會",
-        "例句": "The changes in technology have transformed society.",
-        "句子的中文": "技術的變革改變了社會。"
+        "中文": "使永恆/使不滅",
+        "例句": "His famous speech immortalized him in the hearts of the people.",
+        "句子的中文": "他那著名的演講使他在人們心中永垂不朽。"
     },
-    "prospective": {
-        "範圍": "7A",
+    "gaze": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "預期的",
-        "例句": "I am excited about my prospective job.",
-        "句子的中文": "我對我的預期工作感到興奮。"
+        "中文": "凝視/注視",
+        "例句": "She gazed out of the window, lost in her own thoughts.",
+        "句子的中文": "她凝視著窗外，陷入自己的思緒之中。"
     },
-    "evident": {
-        "範圍": "7A",
+    "garment": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "明顯的",
-        "例句": "It is evident that she has worked hard on this project.",
-        "句子的中文": "顯然她在這個項目上努力了。"
+        "中文": "衣服/服裝",
+        "例句": "She designed a stunning garment for the fashion show.",
+        "句子的中文": "她為時裝秀設計了一件令人驚艷的服裝。"
     },
-    "dissuade": {
-        "範圍": "7A",
+    "vandal": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "勸阻",
-        "例句": "我試圖勸阻他不要接受這份工作，因為它太危險了。",
-        "句子的中文": "我試圖勸阻他不要接受這份工作，因為它太危險了。"
+        "中文": "汪達爾人",
+        "例句": "The vandals destroyed several ancient monuments in the city.",
+        "句子的中文": "這些破壞者毀掉了城市裡的幾座古代紀念碑。"
     },
-    "faith": {
-        "範圍": "7A",
+    "virtual": {
+        "範圍": "9A",
         "全部": "All",
-        "中文": "信念/信仰",
-        "例句": "他對自己成功的能力有信念。",
-        "句子的中文": "他對自己成功的能力有信念。"
+        "中文": "事實上的/實際上的",
+        "例句": "She created a virtual world in her computer game.",
+        "句子的中文": "她在電腦遊戲中創造了一個虛擬世界。"
     },
-    "logic": {
-        "範圍": "7B",
+    "empire": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "邏輯",
-        "例句": "She used logic to solve the problem.",
-        "句子的中文": "她用邏輯解决了这个问题。"
+        "中文": "帝國/大企業",
+        "例句": "The Roman Empire was one of the most powerful empires in history.",
+        "句子的中文": "羅馬帝國是歷史上最強大的帝國之一。"
     },
-    "spiritual": {
-        "範圍": "7B",
+    "account": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "精神上的/心靈的",
-        "例句": "She is on a spiritual journey to find inner peace.",
-        "句子的中文": "她正在一個尋找內心平靜的精神之旅上。"
+        "中文": "解釋/說明",
+        "例句": "He gave a detailed account of what happened that night.",
+        "句子的中文": "他對那天晚上發生的事情進行了詳細的解釋。"
     },
-    "glimpse": {
-        "範圍": "7B",
+    "exception": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "一瞥/瞥見",
-        "例句": "I caught a glimpse of her through the window.",
-        "句子的中文": "我透過窗戶瞥見了她。"
+        "中文": "例外/例外的人/除外/除去",
+        "例句": "Everyone has to follow the rules, without exception.",
+        "句子的中文": "每個人都必須遵守規則，沒有例外。"
     },
-    "shelter": {
-        "範圍": "7B",
+    "take": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "避難所/躲避處",
-        "例句": "The homeless sought shelter from the cold in the abandoned building.",
-        "句子的中文": "無家可歸者在廢棄建築物中尋找避難處以躲避寒冷。"
+        "中文": "接管/繼任",
+        "例句": "He will take over as CEO of the company next month.",
+        "句子的中文": "他將在下個月接任該公司的首席執行官。"
     },
-    "harvest": {
-        "範圍": "7B",
+    "historian": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "收穫",
-        "例句": "They harvested a lot of crops this year.",
-        "句子的中文": "他們今年收穫了很多農作物。"
+        "中文": "歷史學家",
+        "例句": "The historian wrote a comprehensive book on ancient civilizations.",
+        "句子的中文": "這位歷史學家寫了一本關於古代文明的綜合性書籍。"
     },
-    "commercial": {
-        "範圍": "7B",
+    "cutting-edge": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "商業的",
-        "例句": "The company's primary focus is on commercial sales.",
-        "句子的中文": "該公司的主要重點是商業銷售。"
+        "中文": "最前線/尖端",
+        "例句": "The company is known for its cutting-edge technology.",
+        "句子的中文": "這家公司以其尖端技術而聞名。"
     },
-    "solemn": {
-        "範圍": "7B",
+    "initial": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "莊重的",
-        "例句": "The judge made a solemn declaration before the trial began.",
-        "句子的中文": "法官在審判開始前作了一個莊重的宣誓。"
+        "中文": "開始的/最初的",
+        "例句": "I had some difficulties during the initial stage of the project.",
+        "句子的中文": "在項目的最初階段，我遇到了一些困難。"
     },
-    "inhabitants": {
-        "範圍": "7B",
+    "spot": {
+        "範圍": "9B",
         "全部": "All",
-        "中文": "居民",
-        "例句": "The town has a population of 10,000 inhabitants.",
-        "句子的中文": "這個小鎮有一萬名居民。"
+        "中文": "斑點/斑塊",
+        "例句": "There was a spot of paint on her new dress.",
+        "句子的中文": "她的新裙子上有一點油漆。"
+    },
+    "disrespectful": {
+        "範圍": "9B",
+        "全部": "All",
+        "中文": "無禮的/失禮的",
+        "例句": "His disrespectful behavior towards the teacher will not be tolerated.",
+        "句子的中文": "他對老師的無禮行為將不被容忍。"
+    },
+    "forge": {
+        "範圍": "9B",
+        "全部": "All",
+        "中文": "熔鐵爐/煉冶場",
+        "例句": "The blacksmith worked in the forge, shaping the hot metal.",
+        "句子的中文": "鐵匠在熔鐵爐中工作，塑造著熱金屬。"
     }
 }
