@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Review</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
 </head>
@@ -17,119 +17,118 @@
 </style>
 
 <body>
-<div class="header" style="display: block;height: 60px;">
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">Review</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-           aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                英文
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="English.html">英文</a></li>
-                <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                 aria-expanded="false">
-                財務管理
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
-                <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
-                <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
-              </ul>
-            </li>
-          </ul>
+  <div class="header" style="display: block;height: 60px;">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Review</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  英文
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="English.html">英文</a></li>
+                  <li><a class="dropdown-item" href="eng_examination_select.html">英文測驗</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  財務管理
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="./financial.html">財務管理</a></li>
+                  <li><a class="dropdown-item" href="./fin_examination_select.html">財務測驗</a></li>
+                  <li><a class="dropdown-item" href="./fin_focus.html">財物八點</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-</div>
-
-<div class="container">
-  <div class="content mt-4">
-    <div class="d-flex justify-content-between align-items-center">
-      <h1>財務測驗</h1>
-      <button type="button" class="btn btn-outline-secondary"
-              onclick="location.href='./financial.html'"
-      >返回
-      </button>
-    </div>
-    <form action="fin_examination.html" method="get">
-      <table class="table table-striped" style="position: relative;">
-        <thead>
-        <tr>
-          <th scope="col">題數</th>
-          <th scope="col">程度</th>
-        </tr>
-        </thead>
-        <tbody id="table-body">
-        <tr>
-          <td>
-            <input type="number" class="form-control" name="num" min="1" id="num_id" placeholder="">
-          </td>
-          <td>
-            <button type="button" class="btn btn-outline-secondary" onclick="extent_fun()">前往測試</button>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </form>
+    </nav>
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
-        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+  <div class="container">
+    <div class="content mt-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1>財務測驗</h1>
+        <button type="button" class="btn btn-outline-secondary" onclick="location.href='./financial.html'">返回
+        </button>
+      </div>
+      <form action="fin_examination.html" method="get">
+        <table class="table table-striped" style="position: relative;">
+          <thead>
+            <tr>
+              <th scope="col">題數</th>
+              <th scope="col">程度</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+              <td>
+                <input type="number" class="form-control" name="num" min="1" id="num_id" placeholder="">
+              </td>
+              <td>
+                <button type="button" class="btn btn-outline-secondary" onclick="extent_fun()">前往測試</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
 
-<script src="./financial_data.js"></script>
-<script>
-  let key = Object.keys(Data)
-  $("#num_id").attr("placeholder", `上限${key.length}題`)
-  function RemoveAlert() {
-    setTimeout(function () {
-      $(".alert").remove()
-    }, 3000)
-  }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+    integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
 
-  function extent_fun() {
-    let num_bool = true
-    $("#num_id").val(Math.round($("#num_id").val()))
+  <script src="./financial_data.js"></script>
+  <script>
+    let key = Object.keys(Data)
+    $("#num_id").attr("placeholder", `上限${key.length}題`)
+    function RemoveAlert() {
+      setTimeout(function () {
+        $(".alert").remove()
+      }, 3000)
+    }
 
-    if ($("#num_id").val() > key.length) {
-      $(".container").append(`
+    function extent_fun() {
+      let num_bool = true
+      $("#num_id").val(Math.round($("#num_id").val()))
+
+      if ($("#num_id").val() > key.length) {
+        $(".container").append(`
                 <div class="alert alert-danger" role="alert">
                   題數請填入${key.length}以內的數字
                 </div>
             `)
 
-      num_bool = false
-      RemoveAlert()
-    }
+        num_bool = false
+        RemoveAlert()
+      }
 
-    if (num_bool) {
-      $("form").submit();
+      if (num_bool) {
+        $("form").submit();
+      }
     }
-  }
-</script>
+  </script>
 </body>
+
 </html>
